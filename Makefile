@@ -7,6 +7,7 @@ BUILD := $(DIST)/.build
 build: clean
 	mkdir -p $(BUILD)/scripts
 	cp info.plist $(BUILD)/
+	cp icon.png $(BUILD)/
 	cp scripts/*.applescript $(BUILD)/scripts/
 	cd $(BUILD) && zip -r -q ../$(NAME) .
 	rm -rf $(BUILD)
@@ -22,10 +23,11 @@ release: build
 	git push origin $(VERSION)
 	gh release create $(VERSION) $(DIST)/$(NAME) --generate-notes
 
-# pulls info.plist from the live Alfred workflow bundle after editing
-# keywords/hotkeys/icons etc in the Alfred UI. WORKFLOW_DIR is machine-specific,
-# never hardcoded here - pass it at invocation.
+# pulls info.plist + icon.png from the live Alfred workflow bundle after
+# editing keywords/hotkeys/icons etc in the Alfred UI. WORKFLOW_DIR is
+# machine-specific, never hardcoded here - pass it at invocation.
 sync-plist:
 	@test -n "$(WORKFLOW_DIR)" || (echo "usage: make sync-plist WORKFLOW_DIR=/path/to/bundle" && exit 1)
 	cp "$(WORKFLOW_DIR)/info.plist" info.plist
-	@echo "synced info.plist from $(WORKFLOW_DIR)"
+	cp "$(WORKFLOW_DIR)/icon.png" icon.png
+	@echo "synced info.plist + icon.png from $(WORKFLOW_DIR)"

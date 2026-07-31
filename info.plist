@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>dev.gbko.alfred.2do</string>
+	<string>dev.aleksgorbenko.alfred.2do</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>32719E70-31A0-4C77-AD2C-4FE3FCF8D99D</key>
@@ -176,7 +178,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>gbko</string>
+	<string>aleksgorbenko</string>
 	<key>description</key>
 	<string>Browse 2Do Lists, Tasks, Tags</string>
 	<key>disabled</key>
@@ -224,7 +226,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>lis</string>
+				<string>ls</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -363,7 +365,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>do</string>
+				<string>to</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -669,6 +671,6 @@
 	<key>userconfigurationconfig</key>
 	<array/>
 	<key>webaddress</key>
-	<string>https://gbko.dev</string>
+	<string>https://aleksgorbenko.dev</string>
 </dict>
 </plist>
