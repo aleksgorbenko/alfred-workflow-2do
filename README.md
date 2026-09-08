@@ -19,3 +19,12 @@ Each task row shows: 📁 list · 📅 due date · 🏷️ tags · 📝 notes (t
 1. Download the latest `2Do.alfredworkflow` from [Releases](https://github.com/aleksgorbenko/alfred-workflow-2do/releases).
 2. Double-click it — Alfred will prompt to import.
 3. Requires [Alfred](https://www.alfredapp.com) with a Powerpack license (Script Filters/Run Script require it).
+
+## My Other Workflows
+
+- [Netlify for Alfred](https://github.com/aleksgorbenko/alfred-workflow-netlify)
+- [WaniKani for Alfred](https://github.com/aleksgorbenko/alfred-workflow-wanikani)
+- [BunPro for Alfred](https://github.com/aleksgorbenko/alfred-workflow-bunpro)
+- [Discogs for Alfred](https://github.com/aleksgorbenko/alfred-workflow-discogs)
+- [Bandcamp for Alfred](https://github.com/aleksgorbenko/alfred-workflow-bandcamp)
+- [config](https://github.com/aleksgorbenko/config) — index of all my workflows, plus macOS/iOS setup
