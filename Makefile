@@ -2,7 +2,7 @@ DIST := dist
 NAME := 2Do.alfredworkflow
 BUILD := $(DIST)/.build
 
-.PHONY: build clean release sync-plist
+.PHONY: build clean release sync-plist link-live
 
 build: clean
 	mkdir -p $(BUILD)/scripts
@@ -31,3 +31,9 @@ sync-plist:
 	cp "$(WORKFLOW_DIR)/info.plist" info.plist
 	cp "$(WORKFLOW_DIR)/icon.png" icon.png
 	@echo "synced info.plist + icon.png from $(WORKFLOW_DIR)"
+
+link-live:
+	@test -n "$(WORKFLOW_DIR)" || (echo "usage: make link-live WORKFLOW_DIR=/path/to/bundle" && exit 1)
+	rm -rf "$(WORKFLOW_DIR)/scripts"
+	ln -sfn "$(CURDIR)/scripts" "$(WORKFLOW_DIR)/scripts"
+	@echo "linked $(WORKFLOW_DIR) to this repo"
