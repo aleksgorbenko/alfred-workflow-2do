@@ -1,26 +1,34 @@
 DIST := dist
 NAME := 2Do.alfredworkflow
 BUILD := $(DIST)/.build
-APPLESCRIPTS := $(shell git ls-files '*.applescript')
+RUN := uv run --no-sync
+SHELL_SCRIPTS := $(wildcard src/*.sh)
+JXA_SCRIPTS := $(wildcard src/*.js)
 export HOMEBREW_NO_AUTO_UPDATE := 1
 
-.PHONY: setup icons lint lint-applescript lint-data lint-md lint-actions check ci build clean release sync-plist link-live
+.PHONY: setup icons test lint lint-python lint-shell lint-jxa lint-data lint-md lint-actions format format-check audit check ci build clean release sync-plist link-live
 
 setup:
 	brew bundle --quiet
+	uv sync --group dev
 
 icons:
 	icon-symbol.sh --batch tools/icons.txt --outdir icons --fg "#FFFFFF" --size 256
 
-lint: lint-applescript lint-data lint-md lint-actions
+test:
+	$(RUN) pytest
 
-lint-applescript:
-ifdef CI
-	@echo "lint-applescript: skipped in CI, compiling needs the target app installed"
-else
+lint: lint-python lint-shell lint-jxa lint-data lint-md lint-actions
+
+lint-python:
+	$(RUN) ruff check .
+
+lint-shell:
+	shellcheck $(SHELL_SCRIPTS)
+
+lint-jxa:
 	@mkdir -p $(BUILD)
-	$(foreach script,$(APPLESCRIPTS),osacompile -o $(BUILD)/lint.scpt $(script) &&) rm -f $(BUILD)/lint.scpt
-endif
+	$(foreach script,$(JXA_SCRIPTS),osacompile -l JavaScript -o $(BUILD)/lint.scpt $(script) &&) rm -f $(BUILD)/lint.scpt
 
 lint-data:
 	plutil -lint info.plist
@@ -31,16 +39,26 @@ lint-md:
 lint-actions:
 	actionlint
 
-check: lint
+format:
+	$(RUN) ruff format .
 
-ci: check
+format-check:
+	$(RUN) ruff format --check .
+
+audit:
+	$(RUN) pip-audit --skip-editable
+
+check: lint format-check test
+
+ci: check audit
 
 build: clean check
-	mkdir -p $(BUILD)/scripts
-	cp info.plist $(BUILD)/
-	cp icon.png $(BUILD)/
+	mkdir -p $(BUILD)/src
+	cp info.plist icon.png $(BUILD)/
 	cp -R icons $(BUILD)/
-	cp scripts/*.applescript $(BUILD)/scripts/
+	cp src/todo.py src/python.sh src/bridge.js $(BUILD)/src/
+	cp -R src/todolib $(BUILD)/src/
+	find $(BUILD) -name '__pycache__' -prune -exec rm -rf {} +
 	mkdir -p $(BUILD)/images
 	cp -R images/about $(BUILD)/images/
 	cd $(BUILD) && zip -r -q ../$(NAME) .
@@ -69,8 +87,7 @@ sync-plist:
 link-live:
 	@test -n "$(WORKFLOW_DIR)" || (echo "usage: make link-live WORKFLOW_DIR=/path/to/bundle" && exit 1)
 	ln -sfn "$(CURDIR)/images" "$(WORKFLOW_DIR)/images"
-	rm -rf "$(WORKFLOW_DIR)/scripts"
-	ln -sfn "$(CURDIR)/scripts" "$(WORKFLOW_DIR)/scripts"
+	ln -sfn "$(CURDIR)/src" "$(WORKFLOW_DIR)/src"
 	ln -sfn "$(CURDIR)/icons" "$(WORKFLOW_DIR)/icons"
 	ln -sfn "$(CURDIR)/icon.png" "$(WORKFLOW_DIR)/icon.png"
 	@echo "linked $(WORKFLOW_DIR) to this repo"

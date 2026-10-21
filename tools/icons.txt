@@ -1,7 +1,22 @@
-# lists
-list folder.fill #0A84FF
+# focus
+today sun.max.fill #FF9F0A
+starred star.fill #FFD60A
+scheduled calendar.badge.clock #FF375F
+all tray.full.fill #8E8E93
+done checkmark.circle.fill #30D158
+# collections
+list list.bullet #0A84FF
 smart_list line.3.horizontal.decrease.circle.fill #BF5AF2
 # tasks
+project folder.fill #64D2FF
+checklist checklist #FF6482
 task circle #5E5CE6
 task_due calendar #FF9F0A
 task_completed checkmark.circle.fill #30D158
+# tags
+tag tag.fill #30B0C7
+no_tag tag.slash.fill #8E8E93
+# notices
+search magnifyingglass #8E8E93
+empty tray #8E8E93
+error exclamationmark.triangle.fill #FF453A

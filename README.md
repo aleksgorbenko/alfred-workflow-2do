@@ -20,40 +20,75 @@
   <a href="#development">Development</a>
 </p>
 
-Type `ls` to browse your 2Do lists and smart lists.
+Type `ls` to browse Today, Starred, Scheduled, All, Done, tags, your lists and smart lists.
 
-![2Do lists and smart lists in Alfred](images/about/lists.png)
+![2Do browser in Alfred](images/about/browse.png)
 
-Alfred Workflow to browse/edit [2Do](https://www.2doapp.com) tasks/lists via its AppleScript automation suite.
+Type `today` for tasks due today; overdue tasks are marked 🔴.
 
-Requires 2Do Mac (recent version with the `2Do Automation Suite` AppleScript dictionary).
+![2Do Today in Alfred](images/about/today.png)
+
+Alfred Workflow for [2Do](https://www.2doapp.com) tasks, projects and checklists, via the 2Do Automation Suite.
 
 ## Commands
 
-- **List lists & smart lists** - browse your normal lists and smart lists, each with its own icon. Selecting one opens it in 2Do.
-- **Browse a list / smart list** - after selecting a list above, shows its uncompleted tasks immediately, narrows as you type. Open, complete, or delete from here.
-- **Search all tasks** - live search (title, notes, tags, locations) across all uncompleted tasks as you type. Open, complete, or delete.
-- **Today** - uncompleted tasks due today or overdue, shown immediately, narrows as you type. Open, complete, or delete.
-- **Search completed tasks** - search completed tasks, for undoing an accidental complete. Open, uncomplete, or delete.
+| Keyword | Shows |
+|---|---|
+| `ls` | Today, Starred, Scheduled, All, Done, lists and smart lists |
+| `ls today`, `ls starred`, … | That focus list; words after it search it |
+| `ls tags` | No tag first, then tags by task count; pick one to list and search its tasks |
+| `to <query>` | Every open task matching title, notes or tags, subtasks included |
+| `today` | Tasks due today and overdue |
+| `ct` | Completed tasks |
 
-Each task row shows: 📁 list · 📅 due date · 🏷️ tags · 📝 notes (truncated), when present.
+### Navigation
+
+- Enter or Tab on a list, smart list, project or checklist opens it in Alfred.
+- The path builds up in the search box (`ls today > task:…`); delete the last part to go back.
+- The first row of a page is the page itself: Enter opens it in 2Do, Tab goes back.
+- Words after a path filter that page.
+
+![2Do Starred in Alfred](images/about/starred.png)
+
+![2Do Scheduled in Alfred](images/about/scheduled.png)
+
+### Keys
+
+| Key | Action |
+|---|---|
+| Enter | Open the task in 2Do |
+| Cmd+Enter | Complete; on a completed task, mark as not completed |
+| Shift | Hold to read the note; Shift+Enter shows it in Large Type |
+| Ctrl+Enter | Delete |
+| Alt+Enter | Open in 2Do, also for lists and focus rows |
+
+### Rows
+
+- Projects (🗂️) and checklists (☑️) have their own icons and show how many tasks they hold.
+- Overdue tasks start with 🔴.
+- Subtasks show their list and parent: `📁 Home › Move house`.
+- Each row shows start date (⏳), due date (📅) and tags; `⇧ Show note` marks tasks with a note.
+- `to` and tags read subtasks and tags from an index refreshed in the background every 5 minutes and after every change.
+- No tag lists top-level tasks only.
 
 ## Install
 
 1. Download the latest `2Do.alfredworkflow` from [Releases](https://github.com/aleksgorbenko/alfred-workflow-2do/releases).
 2. Double-click it - Alfred will prompt to import.
-3. Requires [Alfred](https://www.alfredapp.com) with a Powerpack licence (Script Filters/Run Script require it).
+3. Requires [Alfred](https://www.alfredapp.com) with a Powerpack licence.
+4. Requires 2Do for Mac with the 2Do Automation Suite, unlocked.
+5. Requires Python 3.11 or newer (`brew install python`).
 
 ## Development
 
-- AppleScript only, no dependencies.
-- `scripts/` - runtime scripts Alfred calls.
+- Python 3.11 or newer, no runtime dependencies.
+- `src/todolib/` - routing and rows; `src/bridge.js` - JXA bridge to 2Do's automation commands.
 - `tools/icons.txt` - result icons, rendered by `make icons`.
 
 ```sh
 make setup   # install dev tools
 make ci      # everything CI runs
-make check   # compile every AppleScript, lint plist and Markdown
+make check   # ruff, shellcheck, JXA compile, plist, Markdown, tests (80% coverage gate)
 make icons   # render icons/*.png
 make build   # package dist/2Do.alfredworkflow
 make release VERSION=v1.0.0

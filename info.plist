@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>65B128F7-5A85-4090-B497-077CEB40864B</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -22,21 +22,41 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>F1F1CDE0-7E25-47A4-8430-B38CCE7DF49E</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
-				<integer>131072</integer>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>❌ Delete Task</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>45343F51-368D-45C4-AEB3-B0F03240F8EC</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string>Uncomplete Task</string>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B7E2D4A1-3C5F-4B8E-9A60-1F2E3D4C5B6A</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -45,7 +65,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>65B128F7-5A85-4090-B497-077CEB40864B</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -55,21 +75,41 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>9726D85E-0CBB-4250-88A9-FFA00C7443DE</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>✅ Complete Task</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>F1F1CDE0-7E25-47A4-8430-B38CCE7DF49E</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B7E2D4A1-3C5F-4B8E-9A60-1F2E3D4C5B6A</string>
 				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
-				<string>❌ Delete Task</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -78,21 +118,51 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>53108F79-598C-42E8-9208-0C979BB69D54</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>Open List</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>BA0072DB-ACAE-425D-8635-E4AFA0BE7293</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>Browse {query} List Tasks</string>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B7E2D4A1-3C5F-4B8E-9A60-1F2E3D4C5B6A</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -101,7 +171,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>65B128F7-5A85-4090-B497-077CEB40864B</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -111,45 +181,19 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>9726D85E-0CBB-4250-88A9-FFA00C7443DE</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>✅ Complete Task</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>F1F1CDE0-7E25-47A4-8430-B38CCE7DF49E</string>
-				<key>modifiers</key>
-				<integer>131072</integer>
-				<key>modifiersubtext</key>
-				<string>❌ Delete Task</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>BA0072DB-ACAE-425D-8635-E4AFA0BE7293</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F9238C32-BFC4-407D-AF17-8EE261A5A383</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-		</array>
-		<key>F9238C32-BFC4-407D-AF17-8EE261A5A383</key>
-		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>65B128F7-5A85-4090-B497-077CEB40864B</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -157,28 +201,28 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>9726D85E-0CBB-4250-88A9-FFA00C7443DE</string>
+				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>262144</integer>
 				<key>modifiersubtext</key>
-				<string>✅ Complete Task</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>F1F1CDE0-7E25-47A4-8430-B38CCE7DF49E</string>
+				<string>B7E2D4A1-3C5F-4B8E-9A60-1F2E3D4C5B6A</string>
 				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
-				<string>❌ Delete Task</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>aleksgorbenko</string>
+	<string>Aleks Gorbenko</string>
 	<key>description</key>
 	<string>Browse 2Do Lists, Tasks, Tags</string>
 	<key>disabled</key>
@@ -190,31 +234,8 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>osascript scripts/open_list.applescript $1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>53108F79-598C-42E8-9208-0C979BB69D54</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
-				<true/>
+				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -236,17 +257,17 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Fetching...</string>
+				<string>Loading…</string>
 				<key>script</key>
-				<string>osascript scripts/list_lists.applescript $1</string>
+				<string>exec /bin/bash src/python.sh src/todo.py --browse "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>includes smart list</string>
+				<string>Today, Starred, Scheduled, All, Done, lists and smart lists</string>
 				<key>title</key>
-				<string>Browse 2Do Lists</string>
+				<string>Browse 2Do</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -273,96 +294,6 @@
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>68</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>osascript scripts/list_scoped_tasks.applescript $1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>F9238C32-BFC4-407D-AF17-8EE261A5A383</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>scope</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>BA0072DB-ACAE-425D-8635-E4AFA0BE7293</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>osascript scripts/open_task.applescript $1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>65B128F7-5A85-4090-B497-077CEB40864B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
 				<string>to</string>
@@ -375,17 +306,17 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Fetching...</string>
+				<string>Loading…</string>
 				<key>script</key>
-				<string>osascript scripts/list_tasks.applescript $1</string>
+				<string>exec /bin/bash src/python.sh src/todo.py --search "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>fetches non-completed tasks</string>
+				<string>Search every open task, subtasks included</string>
 				<key>title</key>
-				<string>Browse 2Do Tasks</string>
+				<string>Search 2Do Tasks</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -401,29 +332,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>osascript scripts/complete_task.applescript $1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>9726D85E-0CBB-4250-88A9-FFA00C7443DE</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -433,7 +341,7 @@
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
@@ -447,17 +355,17 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Fetching...</string>
+				<string>Loading…</string>
 				<key>script</key>
-				<string>osascript scripts/list_completed_tasks.applescript $1</string>
+				<string>exec /bin/bash src/python.sh src/todo.py --done "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>fetches completed tasks only</string>
+				<string>Completed tasks</string>
 				<key>title</key>
-				<string>Browse Complete 2Do Tasks</string>
+				<string>2Do Done</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -469,29 +377,6 @@
 			<string>32719E70-31A0-4C77-AD2C-4FE3FCF8D99D</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>osascript scripts/delete_task.applescript $1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>F1F1CDE0-7E25-47A4-8430-B38CCE7DF49E</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -519,17 +404,17 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Fetching...</string>
+				<string>Loading…</string>
 				<key>script</key>
-				<string>osascript scripts/list_today_tasks.applescript $1</string>
+				<string>exec /bin/bash src/python.sh src/todo.py --today "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>Due today and overdue</string>
 				<key>title</key>
-				<string>Browse Today 2Do Tasks</string>
+				<string>2Do Today</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -548,9 +433,9 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>102</integer>
 				<key>script</key>
-				<string>osascript scripts/uncomplete_task.applescript $1</string>
+				<string>exec /bin/bash src/python.sh src/todo.py --perform</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -561,132 +446,152 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>45343F51-368D-45C4-AEB3-B0F03240F8EC</string>
+			<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>{query}</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>B7E2D4A1-3C5F-4B8E-9A60-1F2E3D4C5B6A</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>Browse, open and complete 2Do tasks and lists from Alfred.
+	<string>Browse, search and complete 2Do tasks, projects and checklists from Alfred.
 
-Type `ls` to browse your 2Do lists and smart lists.
+Type `ls` to browse Today, Starred, Scheduled, All, Done, tags, your lists and smart lists.
 
-![2Do lists and smart lists in Alfred](images/about/lists.png)
+![2Do browser in Alfred](images/about/browse.png)
+
+Type `today` for tasks due today; overdue tasks are marked 🔴.
+
+![2Do Today in Alfred](images/about/today.png)
 
 ## Commands
 
-* `ls` - browse lists and smart lists; Enter opens one in 2Do.
-* `to` - search all uncompleted tasks as you type; open, complete or delete.
-* `today` - tasks due today or overdue; open, complete or delete.
-* `ct` - search completed tasks; open, uncomplete or delete.
+* `ls` - browse Today, Starred, Scheduled, All, Done, tags, lists and smart lists.
+* `ls tags` - No tag first, then tags by task count; pick one to list and search its tasks.
+* `to` - search every open task as you type, subtasks included.
+* `today` - tasks due today and overdue.
+* `ct` - completed tasks.
 
-Each task row shows its list, due date, tags and the start of its notes.
+## Navigation
+
+* Enter or Tab on a list, smart list, project or checklist opens it in Alfred.
+* The path builds up in the search box (`ls today &gt; task:…`); delete the last part to go back.
+* The first row of a page is the page itself: Enter opens it in 2Do, Tab goes back.
+* Type after a path to filter that page.
+
+## Keys
+
+* Enter - open the task in 2Do.
+* Cmd+Enter - complete; on a completed task, mark as not completed.
+* Shift - hold to read the note; Shift+Enter shows it in Large Type.
+* Ctrl+Enter - delete.
+* Alt+Enter - open in 2Do, also for lists and focus rows.
+
+## Rows
+
+* Projects (🗂️) and checklists (☑️) have their own icons and show how many tasks they hold.
+* Subtasks show their list and parent: `📁 Home › Move house`.
+* Each row shows start date (⏳), due date (📅) and tags; `⇧ Show note` marks tasks with a note.
 
 ## Requirements
 
-* 2Do for Mac with the 2Do Automation Suite AppleScript dictionary.
+* 2Do for Mac with the 2Do Automation Suite, unlocked.
+* Python 3.11 or newer (`brew install python`).
 </string>
 	<key>uidata</key>
 	<dict>
 		<key>32719E70-31A0-4C77-AD2C-4FE3FCF8D99D</key>
 		<dict>
 			<key>note</key>
-			<string>Browse Completed Tasks</string>
+			<string>Completed tasks</string>
 			<key>xpos</key>
-			<real>270</real>
+			<integer>30</integer>
 			<key>ypos</key>
-			<real>615</real>
+			<integer>480</integer>
 		</dict>
 		<key>37F13253-5B0E-43D2-8873-61E7302D90F2</key>
 		<dict>
 			<key>note</key>
-			<string>Browse All Non-completed Tasks</string>
+			<string>Today</string>
 			<key>xpos</key>
-			<real>270</real>
+			<integer>30</integer>
 			<key>ypos</key>
-			<real>815</real>
+			<integer>330</integer>
 		</dict>
 		<key>3C3F6951-AF3C-483A-81BF-7406EE4941E0</key>
 		<dict>
 			<key>note</key>
-			<string>Browse All Lists</string>
+			<string>Browse lists, smart lists and projects</string>
 			<key>xpos</key>
-			<real>30</real>
+			<integer>30</integer>
 			<key>ypos</key>
-			<real>195</real>
+			<integer>30</integer>
 		</dict>
 		<key>3DE61072-85FA-4D9A-B938-34077B0755D2</key>
 		<dict>
 			<key>note</key>
-			<string>Browse All Non-completed Tasks</string>
+			<string>Search open tasks</string>
 			<key>xpos</key>
-			<real>270</real>
+			<integer>30</integer>
 			<key>ypos</key>
-			<real>425</real>
+			<integer>180</integer>
 		</dict>
-		<key>45343F51-368D-45C4-AEB3-B0F03240F8EC</key>
+		<key>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</key>
 		<dict>
 			<key>note</key>
-			<string>Uncomplete Task</string>
+			<string>Open, complete, delete or select in 2Do</string>
 			<key>xpos</key>
-			<real>755</real>
+			<integer>400</integer>
 			<key>ypos</key>
-			<real>845</real>
+			<integer>255</integer>
 		</dict>
-		<key>53108F79-598C-42E8-9208-0C979BB69D54</key>
+		<key>B7E2D4A1-3C5F-4B8E-9A60-1F2E3D4C5B6A</key>
 		<dict>
 			<key>note</key>
-			<string>Open List</string>
+			<string>Show the task's note</string>
 			<key>xpos</key>
-			<real>440</real>
+			<integer>400</integer>
 			<key>ypos</key>
-			<real>75</real>
-		</dict>
-		<key>65B128F7-5A85-4090-B497-077CEB40864B</key>
-		<dict>
-			<key>note</key>
-			<string>Open Task</string>
-			<key>xpos</key>
-			<real>755</real>
-			<key>ypos</key>
-			<real>420</real>
-		</dict>
-		<key>9726D85E-0CBB-4250-88A9-FFA00C7443DE</key>
-		<dict>
-			<key>note</key>
-			<string>Complete Task</string>
-			<key>xpos</key>
-			<real>755</real>
-			<key>ypos</key>
-			<real>560</real>
-		</dict>
-		<key>BA0072DB-ACAE-425D-8635-E4AFA0BE7293</key>
-		<dict>
-			<key>xpos</key>
-			<real>325</real>
-			<key>ypos</key>
-			<real>250</real>
-		</dict>
-		<key>F1F1CDE0-7E25-47A4-8430-B38CCE7DF49E</key>
-		<dict>
-			<key>note</key>
-			<string>Delete Task</string>
-			<key>xpos</key>
-			<real>755</real>
-			<key>ypos</key>
-			<real>705</real>
-		</dict>
-		<key>F9238C32-BFC4-407D-AF17-8EE261A5A383</key>
-		<dict>
-			<key>note</key>
-			<string>Browse Single List Tasks</string>
-			<key>xpos</key>
-			<real>440</real>
-			<key>ypos</key>
-			<real>225</real>
+			<integer>405</integer>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variables</key>
+	<dict>
+		<key>subtitle_no_python</key>
+		<string>Install it with brew install python</string>
+		<key>title_no_python</key>
+		<string>Python 3.11 or newer not found</string>
+	</dict>
+	<key>variablesdontexport</key>
 	<array/>
 	<key>webaddress</key>
 	<string>https://aleksgorbenko.dev</string>
