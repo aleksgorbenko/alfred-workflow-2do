@@ -1,0 +1,7 @@
+# lists
+list folder.fill #0A84FF
+smart_list line.3.horizontal.decrease.circle.fill #BF5AF2
+# tasks
+task circle #5E5CE6
+task_due calendar #FF9F0A
+task_completed checkmark.circle.fill #30D158

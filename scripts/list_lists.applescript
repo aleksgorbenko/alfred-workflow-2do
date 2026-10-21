@@ -15,13 +15,13 @@ repeat with aList in (lists of listsResult)
 	set aList to lib's unwrapRecord(aList)
 	set listId to lib's escapeJSON(list_id of aList)
 	set listTitle to lib's escapeJSON(title of aList)
-	set end of jsonItems to "{\"uid\":\"list-" & listId & "\",\"title\":\"📁 " & listTitle & "\",\"subtitle\":\"List\",\"arg\":\"list:" & listId & "\"}"
+	set end of jsonItems to "{\"uid\":\"list-" & listId & "\",\"title\":\"" & listTitle & "\",\"subtitle\":\"List\",\"arg\":\"list:" & listId & "\",\"icon\":{\"path\":\"icons/list.png\"}}"
 end repeat
 repeat with aSmartList in (smart_lists of smartResult)
 	set aSmartList to lib's unwrapRecord(aSmartList)
 	set smartId to lib's escapeJSON(smart_list_id of aSmartList)
 	set smartTitle to lib's escapeJSON(title of aSmartList)
-	set end of jsonItems to "{\"uid\":\"smart-" & smartId & "\",\"title\":\"⚙️ " & smartTitle & "\",\"subtitle\":\"Smart List\",\"arg\":\"smart:" & smartId & "\"}"
+	set end of jsonItems to "{\"uid\":\"smart-" & smartId & "\",\"title\":\"" & smartTitle & "\",\"subtitle\":\"Smart List\",\"arg\":\"smart:" & smartId & "\",\"icon\":{\"path\":\"icons/smart_list.png\"}}"
 end repeat
 
 set AppleScript's text item delimiters to ","

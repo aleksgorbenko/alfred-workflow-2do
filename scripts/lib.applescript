@@ -28,10 +28,10 @@ script Lib
 		return x
 	end unwrapRecord
 
-	on taskToJSON(aTask, titlePrefix)
+	on taskToJSON(aTask, iconName)
 		set aTask to my unwrapRecord(aTask)
 		set taskId to my escapeJSON(task_id of aTask)
-		set taskTitle to my escapeJSON(titlePrefix & (title of aTask))
+		set taskTitle to my escapeJSON(title of aTask)
 		set listTitle to my escapeJSON(list_title of aTask)
 
 		set tagTitles to {}
@@ -58,18 +58,20 @@ script Lib
 			set theNotes to ""
 		end try
 
+		if iconName is "task" and dueDate is not "" then set iconName to "task_due"
+
 		set theSubtitle to "📁 " & listTitle
 		if dueDate is not "" then set theSubtitle to theSubtitle & "  📅 " & dueDate
 		if tagsJoined is not "" then set theSubtitle to theSubtitle & "  🏷️ " & tagsJoined
 		if theNotes is not "" then set theSubtitle to theSubtitle & "  📝 " & theNotes
 
-		return "{\"uid\":\"" & taskId & "\",\"title\":\"" & taskTitle & "\",\"subtitle\":\"" & theSubtitle & "\",\"arg\":\"" & taskId & "\"}"
+		return "{\"uid\":\"" & taskId & "\",\"title\":\"" & taskTitle & "\",\"subtitle\":\"" & theSubtitle & "\",\"arg\":\"" & taskId & "\",\"icon\":{\"path\":\"icons/" & iconName & ".png\"}}"
 	end taskToJSON
 
-	on tasksToItemsJSON(theTasks, titlePrefix)
+	on tasksToItemsJSON(theTasks, iconName)
 		set jsonItems to {}
 		repeat with aTask in theTasks
-			set end of jsonItems to my taskToJSON(aTask, titlePrefix)
+			set end of jsonItems to my taskToJSON(aTask, iconName)
 		end repeat
 		set AppleScript's text item delimiters to ","
 		set itemsJoined to jsonItems as text

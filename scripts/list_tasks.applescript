@@ -21,5 +21,5 @@ on run argv
 		set theResult to query_tasks given arguments:{focus:"all", search:theQuery, include_completed:false, limit:30}
 	end tell
 
-	return lib's tasksToItemsJSON(tasks of theResult, "")
+	return lib's tasksToItemsJSON(tasks of theResult, "task")
 end run

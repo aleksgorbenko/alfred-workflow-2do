@@ -43,5 +43,5 @@ on run argv
 		end if
 	end if
 
-	return lib's tasksToItemsJSON(tasks of theResult, "")
+	return lib's tasksToItemsJSON(tasks of theResult, "task")
 end run

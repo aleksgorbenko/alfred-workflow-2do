@@ -567,7 +567,25 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Browse, open and complete 2Do tasks and lists from Alfred.
+
+Type `ls` to browse your 2Do lists and smart lists.
+
+![2Do lists and smart lists in Alfred](images/about/lists.png)
+
+## Commands
+
+* `ls` - browse lists and smart lists; Enter opens one in 2Do.
+* `to` - search all uncompleted tasks as you type; open, complete or delete.
+* `today` - tasks due today or overdue; open, complete or delete.
+* `ct` - search completed tasks; open, uncomplete or delete.
+
+Each task row shows its list, due date, tags and the start of its notes.
+
+## Requirements
+
+* 2Do for Mac with the 2Do Automation Suite AppleScript dictionary.
+</string>
 	<key>uidata</key>
 	<dict>
 		<key>32719E70-31A0-4C77-AD2C-4FE3FCF8D99D</key>
