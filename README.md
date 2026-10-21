@@ -77,6 +77,10 @@ Alfred Workflow for [2Do](https://www.2doapp.com) tasks, projects and checklists
 - `to` and tags read subtasks and tags from an index refreshed in the background every 5 minutes and after every change.
 - No tag lists top-level tasks only.
 
+### Maintenance
+
+- `:ls` - cache size (Enter reveals the folder) and Empty Cache.
+
 ## Install
 
 1. Download the latest `2Do.alfredworkflow` from [Releases](https://github.com/aleksgorbenko/alfred-workflow-2do/releases).

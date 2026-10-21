@@ -13,7 +13,7 @@ setup:
 	uv sync --group dev
 
 icons:
-	icon-symbol.sh --batch tools/icons.txt --outdir icons --fg "#FFFFFF" --size 256
+	icon-symbol.sh --batch tools/icons.txt --outdir icons --fg "#FFFFFF" --size 256 --style macos
 
 test:
 	$(RUN) pytest
@@ -62,6 +62,8 @@ build: clean check
 	find $(BUILD) -name '__pycache__' -prune -exec rm -rf {} +
 	mkdir -p $(BUILD)/images
 	cp -R images/about $(BUILD)/images/
+	mkdir -p $(BUILD)/src
+	cp src/maintenance.sh $(BUILD)/src/
 	cd $(BUILD) && zip -r -q ../$(NAME) .
 	rm -rf $(BUILD)
 	@echo "built $(DIST)/$(NAME)"
