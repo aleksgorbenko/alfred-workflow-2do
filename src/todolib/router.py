@@ -31,7 +31,7 @@ def _start(mode: str, words: list[str]) -> Route:
         if words and words[0].casefold() == TAGS:
             return Route(TAGS, " ".join(words[1:]), path=path)
         return Route("menu", path, path=path)
-    if mode in ("today", "done"):
+    if mode == "done":
         return Route("focus", path, mode, path)
     return Route("search", path, path=path)
 

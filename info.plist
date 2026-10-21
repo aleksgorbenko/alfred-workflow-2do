@@ -34,69 +34,6 @@
 				<key>destinationuid</key>
 				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
-				<key>modifiers</key>
-				<integer>262144</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>B7E2D4A1-3C5F-4B8E-9A60-1F2E3D4C5B6A</string>
-				<key>modifiers</key>
-				<integer>131072</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>37F13253-5B0E-43D2-8873-61E7302D90F2</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
-				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
 				<string></string>
@@ -140,16 +77,6 @@
 				<key>destinationuid</key>
 				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
-				<integer>524288</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
-				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
 				<string></string>
@@ -184,16 +111,6 @@
 				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>A1C4E2F0-6B3D-4E8A-9F71-2D5C8B0E4A93</string>
-				<key>modifiers</key>
-				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -381,55 +298,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>today</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading…</string>
-				<key>script</key>
-				<string>exec /bin/bash src/python.sh src/todo.py --today "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Due today and overdue</string>
-				<key>title</key>
-				<string>2Do Today</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>37F13253-5B0E-43D2-8873-61E7302D90F2</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -487,16 +355,27 @@ Type `ls` to browse Today, Starred, Scheduled, All, Done, tags, your lists and s
 
 ![2Do browser in Alfred](images/about/browse.png)
 
-Type `today` for tasks due today; overdue tasks are marked 🔴.
+Type `ls today` for tasks due today; overdue tasks are marked 🔴.
 
 ![2Do Today in Alfred](images/about/today.png)
+
+Type `ls starred` for starred tasks.
+
+![2Do Starred in Alfred](images/about/starred.png)
+
+Type `ls scheduled` for tasks with a start date.
+
+![2Do Scheduled in Alfred](images/about/scheduled.png)
+
+Type `ls tags` for tasks by tag, with No tag first.
+
+![2Do tags in Alfred](images/about/tags.png)
 
 ## Commands
 
 * `ls` - browse Today, Starred, Scheduled, All, Done, tags, lists and smart lists.
 * `ls tags` - No tag first, then tags by task count; pick one to list and search its tasks.
 * `to` - search every open task as you type, subtasks included.
-* `today` - tasks due today and overdue.
 * `ct` - completed tasks.
 
 ## Navigation
@@ -512,7 +391,6 @@ Type `today` for tasks due today; overdue tasks are marked 🔴.
 * Cmd+Enter - complete; on a completed task, mark as not completed.
 * Shift - hold to read the note; Shift+Enter shows it in Large Type.
 * Ctrl+Enter - delete.
-* Alt+Enter - open in 2Do, also for lists and focus rows.
 
 ## Rows
 
@@ -535,15 +413,6 @@ Type `today` for tasks due today; overdue tasks are marked 🔴.
 			<integer>30</integer>
 			<key>ypos</key>
 			<integer>480</integer>
-		</dict>
-		<key>37F13253-5B0E-43D2-8873-61E7302D90F2</key>
-		<dict>
-			<key>note</key>
-			<string>Today</string>
-			<key>xpos</key>
-			<integer>30</integer>
-			<key>ypos</key>
-			<integer>330</integer>
 		</dict>
 		<key>3C3F6951-AF3C-483A-81BF-7406EE4941E0</key>
 		<dict>

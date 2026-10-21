@@ -2,8 +2,8 @@ import json
 from typing import Any
 
 
-def task_record(task_id: str, title: str, **fields: Any) -> dict[str, Any]:
-    return {
+def task_record(task_id: str, title: str, **fields: object) -> dict[str, Any]:
+    record: dict[str, Any] = {
         "task_id": task_id,
         "title": title,
         "task_type": "normal",
@@ -13,11 +13,12 @@ def task_record(task_id: str, title: str, **fields: Any) -> dict[str, Any]:
         "completed": False,
         "starred": False,
         "presentation": {"is_overdue": False},
-    } | fields
+    }
+    return record | fields
 
 
 class FakeRunner:
-    def __init__(self, *replies: list[dict[str, Any]]):
+    def __init__(self, *replies: list[dict[str, Any]]) -> None:
         self.replies = list(replies)
         self.requests: list[list[dict[str, Any]]] = []
 

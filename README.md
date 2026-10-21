@@ -24,9 +24,21 @@ Type `ls` to browse Today, Starred, Scheduled, All, Done, tags, your lists and s
 
 ![2Do browser in Alfred](images/about/browse.png)
 
-Type `today` for tasks due today; overdue tasks are marked 🔴.
+Type `ls today` for tasks due today; overdue tasks are marked 🔴.
 
 ![2Do Today in Alfred](images/about/today.png)
+
+Type `ls starred` for starred tasks.
+
+![2Do Starred in Alfred](images/about/starred.png)
+
+Type `ls scheduled` for tasks with a start date.
+
+![2Do Scheduled in Alfred](images/about/scheduled.png)
+
+Type `ls tags` for tasks by tag, with No tag first.
+
+![2Do tags in Alfred](images/about/tags.png)
 
 Alfred Workflow for [2Do](https://www.2doapp.com) tasks, projects and checklists, via the 2Do Automation Suite.
 
@@ -38,7 +50,6 @@ Alfred Workflow for [2Do](https://www.2doapp.com) tasks, projects and checklists
 | `ls today`, `ls starred`, … | That focus list; words after it search it |
 | `ls tags` | No tag first, then tags by task count; pick one to list and search its tasks |
 | `to <query>` | Every open task matching title, notes or tags, subtasks included |
-| `today` | Tasks due today and overdue |
 | `ct` | Completed tasks |
 
 ### Navigation
@@ -48,10 +59,6 @@ Alfred Workflow for [2Do](https://www.2doapp.com) tasks, projects and checklists
 - The first row of a page is the page itself: Enter opens it in 2Do, Tab goes back.
 - Words after a path filter that page.
 
-![2Do Starred in Alfred](images/about/starred.png)
-
-![2Do Scheduled in Alfred](images/about/scheduled.png)
-
 ### Keys
 
 | Key | Action |
@@ -60,7 +67,6 @@ Alfred Workflow for [2Do](https://www.2doapp.com) tasks, projects and checklists
 | Cmd+Enter | Complete; on a completed task, mark as not completed |
 | Shift | Hold to read the note; Shift+Enter shows it in Large Type |
 | Ctrl+Enter | Delete |
-| Alt+Enter | Open in 2Do, also for lists and focus rows |
 
 ### Rows
 

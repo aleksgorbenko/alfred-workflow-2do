@@ -16,7 +16,7 @@ class BridgeError(Exception):
 
 
 def run_osascript(args: list[str]) -> str:
-    completed = subprocess.run(
+    completed = subprocess.run(  # noqa: S603
         ["/usr/bin/osascript", "-l", "JavaScript", *args],
         capture_output=True,
         text=True,
@@ -28,7 +28,7 @@ def run_osascript(args: list[str]) -> str:
 
 
 class Bridge:
-    def __init__(self, runner: Runner, script: Path):
+    def __init__(self, runner: Runner, script: Path) -> None:
         self._runner = runner
         self._script = script
 
@@ -83,6 +83,6 @@ class Bridge:
         (result,) = self.send({"command": "list_tags"})
         return [Tag.from_dict(record) for record in result.get("tags", ())]
 
-    def perform(self, command: str, arguments: dict[str, Any], ui: bool) -> None:
+    def perform(self, command: str, arguments: dict[str, Any], *, ui: bool) -> None:
         request = {"command": command, "arguments": arguments}
         self.send({**request, "op": "ui"} if ui else request)

@@ -53,7 +53,7 @@ class TaskSource(Protocol):
     def subtasks(self, task_id: str) -> list[Task]: ...
     def task_index(self) -> list[dict[str, Any]]: ...
     def tags(self) -> list[Tag]: ...
-    def perform(self, command: str, arguments: dict[str, Any], ui: bool) -> None: ...
+    def perform(self, command: str, arguments: dict[str, Any], *, ui: bool) -> None: ...
 
 
 @dataclass(frozen=True)
@@ -137,7 +137,6 @@ def _task_item(task: Task, here: str, path: str) -> dict[str, Any]:
             ),
             "shift": _note_mod(task.notes),
             "ctrl": _open_mod("Delete", "delete_task", task.task_id),
-            "alt": _open_mod("Open in 2Do", "open_task", task.task_id),
         },
     }
     if task.is_parent:
@@ -161,7 +160,6 @@ def _focus_row(focus: str) -> dict[str, Any]:
         "autocomplete": f"{focus} ",
         "valid": False,
         "icon": _icon(focus),
-        "mods": {"alt": _open_mod("Open in 2Do", "select_focus", focus)},
     }
 
 
@@ -172,15 +170,10 @@ def _collection_row(collection: Collection, path: str) -> dict[str, Any]:
         "autocomplete": _drill(path, f"{collection.kind}:{collection.entity}"),
         "valid": False,
         "icon": _icon("smart_list" if collection.kind == "smart" else "list"),
-        "mods": {
-            "alt": _open_mod(
-                "Open in 2Do", SELECT_ACTIONS[collection.kind], collection.entity
-            )
-        },
     }
 
 
-def _search_arguments(route: Route, **arguments: Any) -> dict[str, Any]:
+def _search_arguments(route: Route, **arguments: str | int) -> dict[str, Any]:
     if route.text:
         arguments["search"] = route.text
     return arguments
@@ -307,7 +300,7 @@ def _tags(route: Route, _here: str, deps: Deps) -> list[dict[str, Any]]:
         (tag for tag in deps.bridge.tags() if not wanted or wanted in fold(tag.title)),
         key=lambda tag: (-counts.get(tag.tag_id, 0), fold(tag.title)),
     )
-    rows = []
+    rows: list[dict[str, Any]] = []
     if not wanted or wanted in fold("No tag"):
         rows.append(
             _tag_row("No tag", NO_TAG, len(_untagged(tasks)), "Top-level tasks only")
@@ -406,7 +399,7 @@ def perform(action: str, target: str, deps: Deps) -> None:
     if action not in ACTIONS or not target:
         return
     command, key, ui = ACTIONS[action]
-    deps.bridge.perform(command, {key: target}, ui)
+    deps.bridge.perform(command, {key: target}, ui=ui)
     if not ui:
         deps.cache.delete(INDEX_KEY)
         refresh(deps)

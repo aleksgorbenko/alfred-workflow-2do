@@ -1,15 +1,15 @@
 from pathlib import Path
 
 import pytest
-from fakes import FakeRunner, task_record
 
+from tests.fakes import FakeRunner, task_record
 from todolib.bridge import Bridge, BridgeError, run_osascript
 from todolib.models import Collection, Tag
 
 SCRIPT = Path("bridge.js")
 
 
-def test_collections_reads_lists_and_smart_lists():
+def test_collections_reads_lists_and_smart_lists() -> None:
     runner = FakeRunner(
         [
             {"result": {"list": [{"list_id": "l1", "title": "Home"}]}},
@@ -26,7 +26,7 @@ def test_collections_reads_lists_and_smart_lists():
     ]
 
 
-def test_tasks_sends_a_query():
+def test_tasks_sends_a_query() -> None:
     runner = FakeRunner([{"result": [task_record("t1", "Milk")]}])
     tasks = Bridge(runner, SCRIPT).tasks({"focus": "today"})
     assert [task.title for task in tasks] == ["Milk"]
@@ -35,12 +35,12 @@ def test_tasks_sends_a_query():
     ]
 
 
-def test_task_reads_one_task():
+def test_task_reads_one_task() -> None:
     runner = FakeRunner([{"result": [task_record("p1", "Move")]}])
     assert Bridge(runner, SCRIPT).task("p1").task_id == "p1"
 
 
-def test_subtasks_skip_completed():
+def test_subtasks_skip_completed() -> None:
     runner = FakeRunner([{"result": [task_record("c1", "Pack")]}])
     assert [task.task_id for task in Bridge(runner, SCRIPT).subtasks("p1")] == ["c1"]
     assert runner.requests[0][0]["arguments"] == {
@@ -49,20 +49,20 @@ def test_subtasks_skip_completed():
     }
 
 
-def test_task_index_returns_records():
+def test_task_index_returns_records() -> None:
     runner = FakeRunner([{"result": [task_record("c1", "Pack")]}])
     assert Bridge(runner, SCRIPT).task_index()[0]["task_id"] == "c1"
     assert runner.requests[0] == [{"op": "task_index"}]
 
 
-def test_tags_reads_tags():
+def test_tags_reads_tags() -> None:
     runner = FakeRunner(
         [{"result": {"tags": [{"tag_id": "g1", "title": "home", "paused": True}]}}]
     )
     assert Bridge(runner, SCRIPT).tags() == [Tag("g1", "home", paused=True)]
 
 
-def test_perform_marks_ui_commands():
+def test_perform_marks_ui_commands() -> None:
     runner = FakeRunner([{"result": {}}], [{"result": {}}])
     bridge = Bridge(runner, SCRIPT)
     bridge.perform("open_task", {"task_id": "t1"}, ui=True)
@@ -71,29 +71,35 @@ def test_perform_marks_ui_commands():
     assert "op" not in runner.requests[1][0]
 
 
-def test_reply_error_raises():
+def test_reply_error_raises() -> None:
     runner = FakeRunner([{"error": "access_denied: 2Do is locked"}])
     with pytest.raises(BridgeError) as raised:
         Bridge(runner, SCRIPT).tasks({})
     assert raised.value.locked
 
 
-def test_run_osascript_returns_output(monkeypatch):
+def test_run_osascript_returns_output(monkeypatch: pytest.MonkeyPatch) -> None:
     class Completed:
         returncode = 0
         stdout = "[]"
         stderr = ""
 
-    monkeypatch.setattr("subprocess.run", lambda *_args, **_kwargs: Completed())
+    def fake_run(*_args: object, **_kwargs: object) -> Completed:
+        return Completed()
+
+    monkeypatch.setattr("subprocess.run", fake_run)
     assert run_osascript(["x"]) == "[]"
 
 
-def test_run_osascript_failure_raises(monkeypatch):
+def test_run_osascript_failure_raises(monkeypatch: pytest.MonkeyPatch) -> None:
     class Completed:
         returncode = 1
         stdout = ""
         stderr = "execution error"
 
-    monkeypatch.setattr("subprocess.run", lambda *_args, **_kwargs: Completed())
+    def fake_run(*_args: object, **_kwargs: object) -> Completed:
+        return Completed()
+
+    monkeypatch.setattr("subprocess.run", fake_run)
     with pytest.raises(BridgeError, match="execution error"):
         run_osascript(["x"])

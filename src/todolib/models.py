@@ -44,8 +44,9 @@ class Task:
 
     @classmethod
     def from_dict(cls, record: dict[str, Any]) -> "Task":
-        presentation = record.get("presentation") or {}
-        parent = record.get("parent")
+        presentation: dict[str, Any] = record.get("presentation") or {}
+        parent: dict[str, str] | None = record.get("parent")
+        child_ids: list[str] = record.get("child_task_ids") or []
         completed = bool(record.get("completed"))
         return cls(
             task_id=record["task_id"],
@@ -62,7 +63,7 @@ class Task:
             completed=completed,
             starred=bool(record.get("starred")),
             overdue=bool(presentation.get("is_overdue")) and not completed,
-            child_count=len(record.get("child_task_ids") or ()),
+            child_count=len(child_ids),
             parent=Parent(parent["task_id"], parent["title"], parent["task_type"])
             if parent
             else None,

@@ -22,6 +22,7 @@ lint: lint-python lint-shell lint-jxa lint-data lint-md lint-actions
 
 lint-python:
 	$(RUN) ruff check .
+	$(RUN) pyright
 
 lint-shell:
 	shellcheck $(SHELL_SCRIPTS)

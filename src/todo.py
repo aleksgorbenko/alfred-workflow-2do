@@ -14,7 +14,7 @@ from todolib.cache import Cache  # noqa: E402
 
 
 def spawn_refresh() -> None:
-    subprocess.Popen(
+    subprocess.Popen(  # noqa: S603
         [sys.executable, __file__, "--refresh"],
         stdin=subprocess.DEVNULL,
         stdout=subprocess.DEVNULL,
@@ -45,7 +45,8 @@ def main(argv: list[str]) -> None:
             deps,
         )
     else:
-        print(json.dumps(run(query, command.removeprefix("--") or "browse", deps)))
+        mode = command.removeprefix("--") or "browse"
+        sys.stdout.write(json.dumps(run(query, mode, deps)) + "\n")
 
 
 if __name__ == "__main__":
