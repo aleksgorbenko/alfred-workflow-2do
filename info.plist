@@ -427,6 +427,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>{const:alfred_workflow_name}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>ADA1D4A9-33D7-4B1B-A02E-2EA081E7AF31</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -447,30 +468,11 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>{const:alfred_workflow_name}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>ADA1D4A9-33D7-4B1B-A02E-2EA081E7AF31</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
-	<string>Browse, search and complete 2Do tasks, projects and checklists from Alfred.
+	<string>## Usage
+
+Browse, search and complete 2Do tasks, projects and checklists via the `ls` keyword.
 
 Type `ls` to browse Today, Starred, Scheduled, All, Done, tags, your lists and smart lists.
 
@@ -492,41 +494,34 @@ Type `ls tags` for tasks by tag, with No tag first.
 
 ![2Do tags in Alfred](images/about/tags.png)
 
-## Commands
-
 * `ls` - browse Today, Starred, Scheduled, All, Done, tags, lists and smart lists.
 * `ls tags` - No tag first, then tags by task count; pick one to list and search its tasks.
 * `to` - search every open task as you type, subtasks included.
 * `ct` - completed tasks.
 
-## Navigation
+### Navigation
 
-* Enter or Tab on a list, smart list, project or checklist opens it in Alfred.
+* &lt;kbd&gt;↩&lt;/kbd&gt; or &lt;kbd&gt;⇥&lt;/kbd&gt; on a list, smart list, project or checklist opens it in Alfred.
 * The path builds up in the search box (`ls today &gt; task:…`); delete the last part to go back.
-* The first row of a page is the page itself: Enter opens it in 2Do, Tab goes back.
+* The first row of a page is the page itself: &lt;kbd&gt;↩&lt;/kbd&gt; opens it in 2Do, &lt;kbd&gt;⇥&lt;/kbd&gt; goes back.
 * Type after a path to filter that page.
 
-## Keys
+### Keys
 
-* Enter - open the task in 2Do.
-* Cmd+Enter - complete; on a completed task, mark as not completed.
-* Shift - hold to read the note; Shift+Enter shows it in Large Type.
-* Ctrl+Enter - delete.
+* &lt;kbd&gt;↩&lt;/kbd&gt; Open the task in 2Do.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Complete; on a completed task, mark as not completed.
+* &lt;kbd&gt;⇧&lt;/kbd&gt; Hold to read the note; &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; shows it in Large Type.
+* &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Delete.
 
-## Rows
+### Rows
 
 * Projects (🗂️) and checklists (☑️) have their own icons and show how many tasks they hold.
 * Subtasks show their list and parent: `📁 Home › Move house`.
 * Each row shows start date (⏳), due date (📅) and tags; `⇧ Show note` marks tasks with a note.
 
-## Requirements
+### Maintenance
 
-* 2Do for Mac with the 2Do Automation Suite, unlocked.
-* Python 3.11 or newer (`brew install python`).
-
-## Maintenance
-
-* `:ls` - cache size (Enter reveals the folder) and Empty Cache.
+* `:ls` - cache size (&lt;kbd&gt;↩&lt;/kbd&gt; reveals the folder) and Empty Cache.
 </string>
 	<key>uidata</key>
 	<dict>

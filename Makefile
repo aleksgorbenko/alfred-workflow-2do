@@ -13,7 +13,7 @@ setup:
 	uv sync --group dev
 
 icons:
-	icon-symbol.sh --batch tools/icons.txt --outdir icons --fg "#FFFFFF" --size 256 --style macos
+	icon-symbol.sh --batch tools/icons.txt --outdir icons --size 256 --fg "#FFFFFF" --style macos
 
 test:
 	$(RUN) pytest

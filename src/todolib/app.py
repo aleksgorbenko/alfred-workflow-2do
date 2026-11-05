@@ -233,7 +233,7 @@ def _collection(route: Route, here: str, deps: Deps) -> list[dict[str, Any]]:
         return items
     header = _header(_collection_row(collection, route.parent), route.parent) | {
         "variables": {"action": SELECT_ACTIONS[route.kind], "target": route.entity},
-        "subtitle": f"{COLLECTION_SUBTITLES[route.kind]}{SEPARATOR}Open in 2Do",
+        "subtitle": f"{COLLECTION_SUBTITLES[route.kind]} · ↩ Open in 2Do",
     }
     return [header, *items]
 

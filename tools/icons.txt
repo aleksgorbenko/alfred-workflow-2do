@@ -20,3 +20,4 @@ no_tag tag.slash.fill #8E8E93
 search magnifyingglass #8E8E93
 empty tray #8E8E93
 error exclamationmark.triangle.fill #FF453A
+maintenance_clear trash.fill #FF453A

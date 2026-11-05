@@ -54,19 +54,19 @@ Alfred Workflow for [2Do](https://www.2doapp.com) tasks, projects and checklists
 
 ### Navigation
 
-- Enter or Tab on a list, smart list, project or checklist opens it in Alfred.
+- `↩` or `⇥` on a list, smart list, project or checklist opens it in Alfred.
 - The path builds up in the search box (`ls today > task:…`); delete the last part to go back.
-- The first row of a page is the page itself: Enter opens it in 2Do, Tab goes back.
+- The first row of a page is the page itself: `↩` opens it in 2Do, `⇥` goes back.
 - Words after a path filter that page.
 
 ### Keys
 
 | Key | Action |
 |---|---|
-| Enter | Open the task in 2Do |
-| Cmd+Enter | Complete; on a completed task, mark as not completed |
-| Shift | Hold to read the note; Shift+Enter shows it in Large Type |
-| Ctrl+Enter | Delete |
+| `↩` | Open the task in 2Do |
+| `⌘↩` | Complete; on a completed task, mark as not completed |
+| `⇧` | Hold to read the note; `⇧↩` shows it in Large Type |
+| `⌃↩` | Delete |
 
 ### Rows
 
@@ -79,7 +79,7 @@ Alfred Workflow for [2Do](https://www.2doapp.com) tasks, projects and checklists
 
 ### Maintenance
 
-- `:ls` - cache size (Enter reveals the folder) and Empty Cache.
+- `:ls` - cache size (`↩` reveals the folder) and Empty Cache.
 
 ## Install
 
