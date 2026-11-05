@@ -32,7 +32,7 @@ ignore = ["COM812", "CPY", "D"]
 quote-style = "double"
 
 [tool.pyright]
-include = ["src", "tests"]
+include = ["src", "tests", "tools"]
 extraPaths = ["src"]
 pythonVersion = "3.11"
 typeCheckingMode = "strict"

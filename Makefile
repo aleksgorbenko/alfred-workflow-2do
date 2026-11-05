@@ -6,10 +6,9 @@ SHELL_SCRIPTS := $(wildcard src/*.sh)
 JXA_SCRIPTS := $(wildcard src/*.js)
 export HOMEBREW_NO_AUTO_UPDATE := 1
 
-.PHONY: setup icons test lint lint-python lint-shell lint-jxa lint-data lint-md lint-actions format format-check audit check ci build clean release sync-plist link-live
+.PHONY: setup icons test lint lint-python lint-shell lint-jxa lint-data lint-md lint-actions format format-check audit check ci build clean verify release sync-plist link-live
 
 setup:
-	brew bundle --quiet
 	uv sync --group dev
 
 icons:
@@ -53,7 +52,8 @@ check: lint format-check test
 
 ci: check audit
 
-build: clean check
+build: check
+	rm -rf $(DIST)
 	mkdir -p $(BUILD)/src
 	cp info.plist icon.png $(BUILD)/
 	cp -R icons $(BUILD)/
@@ -72,7 +72,10 @@ clean:
 	rm -rf $(DIST)
 	mkdir -p $(DIST)
 
-release: build
+verify:
+	$(RUN) python tools/verify_bundle.py $(DIST)/$(NAME)
+
+release: build verify
 	@test -n "$(VERSION)" || (echo "usage: make release VERSION=v1.0.0" && exit 1)
 	git tag $(VERSION)
 	git push origin $(VERSION)
